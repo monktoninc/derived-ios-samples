@@ -1,4 +1,4 @@
-# Derived iOS Samples
+# DerivedKit iOS Samples
 
 This repository adds sample apps for DerivedKit for iOS. These samples demonstrate the code needed to integrate DerivedKit into any app and leverage PKI.
 
