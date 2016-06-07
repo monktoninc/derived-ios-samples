@@ -21,35 +21,25 @@
 /// SOFTWARE.
 ///
 
-import UIKit
+import Foundation
 import DerivedKit
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-	var window: UIWindow?
-
+class SignDataSample {
+	
 	/**
-		For our demo app, we will set the scheme, which is set in the plist for
-		the app under the CFBundleURLTypes setting.
+		Performs the signature operation from PKI
 	*/
-	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-		// Override point for customization after application launch.
+	func signData() {
 		
-		// Set the scheme for our callbacks... 
-		DerivedController.getInstance().setScheme("derivedemo")
+		// Create some data to sign
+		let dataToSign = NSData(base64EncodedString: "Hello!", options: NSDataBase64DecodingOptions.init(rawValue: 0))!;
 		
-		return true
-	}
-
-	/**
-		This is where we will handle the callback from the Derived app. This will
-		route to the `DerivedController` that will process the url.
-	*/
-	func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-		// Must handle this here
-		return DerivedController.getInstance().handleOpenUrl(url, sourceApplication: sourceApplication);
+		// Perform the signature operation
+		DerivedController.getInstance().sign(data: dataToSign) {
+			(wasSuccess, data) in
+			/** Perform operations on signed data **/
+		}
+		
 	}
 	
 }
-

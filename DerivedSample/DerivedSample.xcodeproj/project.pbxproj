@@ -15,6 +15,7 @@
 		F21683E71CEA3D7B005EAF34 /* DerivedImplViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21683E61CEA3D7B005EAF34 /* DerivedImplViewController.swift */; };
 		F25E11AA1CEBB67700F67823 /* DerivedKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F25E11A91CEBB67700F67823 /* DerivedKit.framework */; };
 		F25E11AB1CEBB67700F67823 /* DerivedKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F25E11A91CEBB67700F67823 /* DerivedKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F2FD0E971D073D4D00080CC6 /* SignDataSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FD0E961D073D4D00080CC6 /* SignDataSample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,7 +41,8 @@
 		F21683D01CEA3CEA005EAF34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F21683D21CEA3CEA005EAF34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F21683E61CEA3D7B005EAF34 /* DerivedImplViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DerivedImplViewController.swift; sourceTree = "<group>"; };
-		F25E11A91CEBB67700F67823 /* DerivedKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DerivedKit.framework; path = ../../../Library/Frameworks/Rebar/Development/DerivedKit.framework; sourceTree = "<group>"; };
+		F25E11A91CEBB67700F67823 /* DerivedKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DerivedKit.framework; path = /Library/Frameworks/Rebar/Development/DerivedKit.framework; sourceTree = "<group>"; };
+		F2FD0E961D073D4D00080CC6 /* SignDataSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignDataSample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				F21683CF1CEA3CEA005EAF34 /* LaunchScreen.storyboard */,
 				F21683D21CEA3CEA005EAF34 /* Info.plist */,
 				F21683E61CEA3D7B005EAF34 /* DerivedImplViewController.swift */,
+				F2FD0E961D073D4D00080CC6 /* SignDataSample.swift */,
 			);
 			path = DerivedSample;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2FD0E971D073D4D00080CC6 /* SignDataSample.swift in Sources */,
 				F21683C91CEA3CEA005EAF34 /* ViewController.swift in Sources */,
 				F21683E71CEA3D7B005EAF34 /* DerivedImplViewController.swift in Sources */,
 				F21683C71CEA3CEA005EAF34 /* AppDelegate.swift in Sources */,
@@ -277,7 +281,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Frameworks/Rebar/Development",
+					/Library/Frameworks/Rebar/Development,
 				);
 				INFOPLIST_FILE = DerivedSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -292,7 +296,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Frameworks/Rebar/Production",
+					/Library/Frameworks/Rebar/Production,
 				);
 				INFOPLIST_FILE = DerivedSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

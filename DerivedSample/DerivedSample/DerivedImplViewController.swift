@@ -26,25 +26,27 @@ import DerivedKit
 
 class DerivedImplViewController : DerivedLoginScreen {
 	
-	/// Method to override when the callback has completed. This can be a
-	/// success or failure callback
-	///
-	/// - Parameters:
-	///     - wasSuccess: A boolean indicating if the process was a success
-	///     - data: key data with values for the public key
-	///
-	/// - Returns: A boolean (true) if the superclass handled the callback. A
-	///				value of false if the subclass should handle it.
-	override func loginComplete(wasSuccess: Bool, data: [String:String]) -> Bool {
-		if super.loginComplete(wasSuccess, data: data) {
+	/**
+		Method to override when the callback has completed. This can be a
+		success or failure callback
+
+		- Parameter wasSuccess: A boolean indicating if the process was a success
+		- Parameter data: key data with values for the public key
+	
+		- Returns: A boolean `true` if the superclass handled the callback. A
+					value of `false` if the subclass should handle it.
+	*/
+	override func loginComplete(wasSuccess: Bool, credential: CredentialSet?) -> Bool {
+		if super.loginComplete(wasSuccess, credential: credential) {
 			return true;
 		}
 		
 		// Check for other errors now...
-		if wasSuccess && data["error"] == nil {
-			// Another error message...
-			// let base64Encoded = data["cert"];
-			// let upn = data["name"];
+		if wasSuccess && credential!.error == nil {
+			// Handle your error here...
+		}
+		else {
+			// Perform your login here...
 		}
 		
 		// We handled this...
