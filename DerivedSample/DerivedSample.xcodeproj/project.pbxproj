@@ -15,6 +15,7 @@
 		F21683E71CEA3D7B005EAF34 /* DerivedImplViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21683E61CEA3D7B005EAF34 /* DerivedImplViewController.swift */; };
 		F25E11AA1CEBB67700F67823 /* DerivedKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F25E11A91CEBB67700F67823 /* DerivedKit.framework */; };
 		F25E11AB1CEBB67700F67823 /* DerivedKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F25E11A91CEBB67700F67823 /* DerivedKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F2F253FD1D244EBB008EEDBF /* AuthenticateSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F253FC1D244EBB008EEDBF /* AuthenticateSample.swift */; };
 		F2FD0E971D073D4D00080CC6 /* SignDataSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FD0E961D073D4D00080CC6 /* SignDataSample.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		F21683D21CEA3CEA005EAF34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F21683E61CEA3D7B005EAF34 /* DerivedImplViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DerivedImplViewController.swift; sourceTree = "<group>"; };
 		F25E11A91CEBB67700F67823 /* DerivedKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DerivedKit.framework; path = /Library/Frameworks/Rebar/Development/DerivedKit.framework; sourceTree = "<group>"; };
+		F2F253FC1D244EBB008EEDBF /* AuthenticateSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticateSample.swift; sourceTree = "<group>"; };
 		F2FD0E961D073D4D00080CC6 /* SignDataSample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignDataSample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +87,7 @@
 				F21683D21CEA3CEA005EAF34 /* Info.plist */,
 				F21683E61CEA3D7B005EAF34 /* DerivedImplViewController.swift */,
 				F2FD0E961D073D4D00080CC6 /* SignDataSample.swift */,
+				F2F253FC1D244EBB008EEDBF /* AuthenticateSample.swift */,
 			);
 			path = DerivedSample;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				F21683C91CEA3CEA005EAF34 /* ViewController.swift in Sources */,
 				F21683E71CEA3D7B005EAF34 /* DerivedImplViewController.swift in Sources */,
 				F21683C71CEA3CEA005EAF34 /* AppDelegate.swift in Sources */,
+				F2F253FD1D244EBB008EEDBF /* AuthenticateSample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
