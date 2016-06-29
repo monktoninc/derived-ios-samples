@@ -36,6 +36,8 @@ class AuthenticateSample {
 			credentials in
 			
 			if credentials.wasSuccess {
+				
+				// All data is base64 encoded for easy use 
 				let key: String? = credentials.credentials?.publicKey;
 				let toSign: String? = credentials.credentials?.dataToSign;
 				let signed: String? = credentials.credentials?.signedData;
