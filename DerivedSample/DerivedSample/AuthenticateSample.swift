@@ -32,17 +32,28 @@ class AuthenticateSample {
 	func authUser() {
 		
 		// Authenticate the user
-		DerivedController.getInstance().requestCredentials(withHashingAlgorithm: DerivedHashingAlgorithm.SHA512) {
+		DerivedController.getInstance().authenticate(withHashingAlgorithm: DerivedHashingAlgorithm.SHA512) {
 			credentials in
 			
 			if credentials.wasSuccess {
 				
-				// All data is base64 encoded for easy use 
-				let key: String? = credentials.credentials?.publicKey;
+				// All data is base64 encoded for easy use
+				let certificate: String? = credentials.credentials?.certificate;
+				let publicKey: String? = credentials.credentials?.publicKey;
 				let toSign: String? = credentials.credentials?.dataToSign;
 				let signed: String? = credentials.credentials?.signedData;
 				
-				/** Send credentials to server to authenticate the user **/
+				/** 
+				Send credentials to server to authenticate the user, 
+				
+				You must verify the "signed" data with the data to sign "toSign", 
+				the public key, and the hashing algorithm. This determines if 
+				the user has the private key. This is done through message 
+				digest verification. 
+				
+				Additionally, you must check the OCSP or CRL for the certificate, 
+				verifying that the certificate has been revoked for the user.
+				**/
 			}
 			
 		};
