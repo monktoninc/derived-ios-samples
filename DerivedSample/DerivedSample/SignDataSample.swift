@@ -27,17 +27,18 @@ import DerivedKit
 class SignDataSample {
 	
 	/**
-		Performs the signature operation from PKI
+	Performs the signature operation from PKI
 	*/
-	func signData() {
+	static func signData() {
 		
 		// Create some data to sign
-		let dataToSign = NSData(base64EncodedString: "Hello!", options: NSDataBase64DecodingOptions.init(rawValue: 0))!;
+		let dataToSign = "Hello!".dataUsingEncoding(NSUTF8StringEncoding)!;
 		
 		// Perform the signature operation
 		DerivedController.getInstance().sign(data: dataToSign) {
 			(wasSuccess, data) in
 			/** Perform operations on signed data **/
+			print("data signed");
 		}
 		
 	}

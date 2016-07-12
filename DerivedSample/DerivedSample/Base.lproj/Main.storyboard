@@ -28,12 +28,25 @@
                                     <action selector="loginWithDerivedTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Qo-ye-hpu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhH-lA-Cb1">
+                                <rect key="frame" x="20" y="480" width="560" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="e9a-dm-dIP"/>
+                                </constraints>
+                                <state key="normal" title="Sign Data"/>
+                                <connections>
+                                    <action selector="signWithDerivedTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p0B-fg-XiV"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="1Vu-7v-T7O" secondAttribute="leading" id="0xy-qu-aht"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uhH-lA-Cb1" secondAttribute="trailing" id="BNn-xi-ZdY"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1Vu-7v-T7O" secondAttribute="bottom" constant="20" id="Ib4-Xs-65N"/>
+                            <constraint firstItem="1Vu-7v-T7O" firstAttribute="top" secondItem="uhH-lA-Cb1" secondAttribute="bottom" constant="8" id="Uza-YL-b4V"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1Vu-7v-T7O" secondAttribute="trailing" id="bY6-z6-IjG"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="uhH-lA-Cb1" secondAttribute="leading" id="dKg-od-HzM"/>
                         </constraints>
                     </view>
                 </viewController>
