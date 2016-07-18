@@ -36,6 +36,13 @@ class ViewController: UIViewController {
 		// Dispose of any resources that can be recreated.
 	}
 
+	@IBAction func signWitHDerivedTapped(sender: AnyObject) {
+		
+		// Sign some data
+		SignDataSample.signData();
+		
+	}
+	
 	@IBAction func loginWithDerivedTapped(sender: AnyObject) {
 		
 		// Present a derived login controller
