@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,21 +19,21 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Vu-7v-T7O">
-                                <rect key="frame" x="20" y="534" width="560" height="46"/>
+                                <rect key="frame" x="16" y="601" width="343" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="z8g-9t-huX"/>
                                 </constraints>
-                                <state key="normal" title="Login with Derived Credentials"/>
+                                <state key="normal" title="Login with DerivedKit View"/>
                                 <connections>
                                     <action selector="loginWithDerivedTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Qo-ye-hpu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhH-lA-Cb1">
-                                <rect key="frame" x="20" y="480" width="560" height="46"/>
+                                <rect key="frame" x="16" y="547" width="343" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="e9a-dm-dIP"/>
                                 </constraints>
@@ -38,21 +42,34 @@
                                     <action selector="signWitHDerivedTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W9r-CE-82k"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9A-JM-Vbj">
+                                <rect key="frame" x="16" y="493" width="343" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="q3P-jM-rTd"/>
+                                </constraints>
+                                <state key="normal" title="Login with Dervied Credentials Programatically"/>
+                                <connections>
+                                    <action selector="loginWithDerivedProgramaticallyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pSX-ZG-WZy"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="1Vu-7v-T7O" secondAttribute="leading" id="0xy-qu-aht"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uhH-lA-Cb1" secondAttribute="trailing" id="BNn-xi-ZdY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="j9A-JM-Vbj" secondAttribute="trailing" id="HA6-0L-9ee"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1Vu-7v-T7O" secondAttribute="bottom" constant="20" id="Ib4-Xs-65N"/>
+                            <constraint firstItem="uhH-lA-Cb1" firstAttribute="top" secondItem="j9A-JM-Vbj" secondAttribute="bottom" constant="8" id="PlN-fx-cfl"/>
                             <constraint firstItem="1Vu-7v-T7O" firstAttribute="top" secondItem="uhH-lA-Cb1" secondAttribute="bottom" constant="8" id="Uza-YL-b4V"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1Vu-7v-T7O" secondAttribute="trailing" id="bY6-z6-IjG"/>
                             <constraint firstAttribute="leadingMargin" secondItem="uhH-lA-Cb1" secondAttribute="leading" id="dKg-od-HzM"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="j9A-JM-Vbj" secondAttribute="leading" id="wbO-QC-UBb"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="314" y="315"/>
+            <point key="canvasLocation" x="312.80000000000001" y="314.39280359820094"/>
         </scene>
     </scenes>
 </document>

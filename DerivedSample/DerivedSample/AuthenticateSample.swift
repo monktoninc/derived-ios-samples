@@ -32,16 +32,16 @@ class AuthenticateSample {
 	func authUser() {
 		
 		// Authenticate the user
-		DerivedController.getInstance().authenticate(withHashingAlgorithm: DerivedHashingAlgorithm.SHA512) {
-			credentials in
+		DerivedController.getInstance().authenticate(withHashingAlgorithm: DerivedHashingAlgorithm.sha512) {
+            (wasSuccess: Bool, credentials: CredentialSet?) in
 			
-			if credentials.wasSuccess {
-				
+			if wasSuccess {
+
 				// All data is base64 encoded for easy use
-				let certificate: String? = credentials.credentials?.certificate;
-				let publicKey: String? = credentials.credentials?.publicKey;
-				let toSign: String? = credentials.credentials?.dataToSign;
-				let signed: String? = credentials.credentials?.signedData;
+				let certificate: String? = credentials?.certificate;
+				let publicKey: String? = credentials?.publicKey;
+				let toSign: String? = credentials?.dataToSign;
+				let signed: String? = credentials?.signedData;
 				
 				/** 
 				Send credentials to server to authenticate the user, 

@@ -36,7 +36,7 @@ class DerivedImplViewController : DerivedLoginScreen {
 		- Returns: A boolean `true` if the superclass handled the callback. A
 					value of `false` if the subclass should handle it.
 	*/
-	override func loginComplete(wasSuccess: Bool, credential: CredentialSet?) -> Bool {
+	override func loginComplete(_ wasSuccess: Bool, credential: CredentialSet?) -> Bool {
 		if super.loginComplete(wasSuccess, credential: credential) {
 			return true;
 		}

@@ -32,7 +32,7 @@ class SignDataSample {
 	static func signData() {
 		
 		// Create some data to sign
-		let dataToSign = "Hello!".dataUsingEncoding(NSUTF8StringEncoding)!;
+		let dataToSign = "Hello!".data(using: String.Encoding.utf8)!;
 		
 		// Perform the signature operation
 		DerivedController.getInstance().sign(data: dataToSign) {

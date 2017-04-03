@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		For our demo app, we will set the scheme, which is set in the plist for
 		the app under the CFBundleURLTypes setting.
 	*/
-	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
 		
 		// Set the scheme for our callbacks... 
@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		This is where we will handle the callback from the Derived app. This will
 		route to the `DerivedController` that will process the url.
 	*/
-	func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+	func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
 		// Must handle this here
 		return DerivedController.getInstance().handleOpenUrl(url, sourceApplication: sourceApplication);
 	}
