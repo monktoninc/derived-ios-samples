@@ -39,13 +39,13 @@ class ViewController: UIViewController {
 	@IBAction func signWitHDerivedTapped(_ sender: AnyObject) {
 		
 		// Sign some data
-		SignDataSample.signData();
+        SignDataSample.signData(vc: self);
 		
 	}
     
     @IBAction func loginWithDerivedProgramaticallyTapped(_ sender: AnyObject) {
         // Login programatically
-        AuthenticateSample().authUser();
+        AuthenticateSample().authUser(vc: self);
     }
     
     @IBAction func loginWithDerivedTapped(_ sender: AnyObject) {

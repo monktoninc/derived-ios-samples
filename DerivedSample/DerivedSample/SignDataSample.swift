@@ -29,7 +29,7 @@ class SignDataSample {
 	/**
 	Performs the signature operation from PKI
 	*/
-	static func signData() {
+    static func signData(vc: UIViewController) {
 		
 		// Create some data to sign
 		let dataToSign = "Hello!".data(using: String.Encoding.utf8)!;
@@ -38,6 +38,14 @@ class SignDataSample {
 		DerivedController.getInstance().sign(data: dataToSign) {
 			(wasSuccess, data) in
 			/** Perform operations on signed data **/
+            
+            let alertController = UIAlertController(title: "Data Signed", message: data!.dataSigned!, preferredStyle: .alert)
+            
+            let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in }
+            alertController.addAction(OKAction)
+            
+            vc.present(alertController, animated: true) { };
+            
 			print("data signed");
 		}
 		

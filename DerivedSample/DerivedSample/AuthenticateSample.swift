@@ -29,7 +29,7 @@ class AuthenticateSample {
 	/**
 	Performs the authentication action
 	*/
-	func authUser() {
+    func authUser(vc: UIViewController) {
 		
 		// Authenticate the user
 		DerivedController.getInstance().authenticate(withHashingAlgorithm: DerivedHashingAlgorithm.sha512) {
@@ -41,8 +41,16 @@ class AuthenticateSample {
 				let certificate: String? = credentials?.certificate;
 				let publicKey: String? = credentials?.publicKey;
 				let toSign: String? = credentials?.dataToSign;
-				let signed: String? = credentials?.signedData;
+				let signed: String? = credentials?.dataSigned;
 				
+                
+                let alertController = UIAlertController(title: "Data Signed", message: signed, preferredStyle: .alert)
+                
+                let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in }
+                alertController.addAction(OKAction)
+                
+                vc.present(alertController, animated: true) { };
+                
 				/** 
 				Send credentials to server to authenticate the user, 
 				
