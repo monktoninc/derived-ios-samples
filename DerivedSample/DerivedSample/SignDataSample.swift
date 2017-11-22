@@ -35,7 +35,7 @@ class SignDataSample {
 		let dataToSign = "Hello!".data(using: String.Encoding.utf8)!;
 		
 		// Perform the signature operation
-		DerivedController.getInstance().sign(data: dataToSign) {
+		DerivedController.default.sign(data: dataToSign) {
 			(wasSuccess, data) in
 			/** Perform operations on signed data **/
             

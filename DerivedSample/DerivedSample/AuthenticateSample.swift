@@ -32,7 +32,7 @@ class AuthenticateSample {
     func authUser(vc: UIViewController) {
 		
 		// Authenticate the user
-		DerivedController.getInstance().authenticate(withHashingAlgorithm: DerivedHashingAlgorithm.sha512) {
+		DerivedController.default.authenticate(withHashingAlgorithm: DerivedHashingAlgorithm.sha512) {
             (wasSuccess: Bool, credentials: CredentialSet?) in
 			
 			if wasSuccess {

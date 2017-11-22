@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Override point for customization after application launch.
 		
 		// Set the scheme for our callbacks... 
-		DerivedController.getInstance().setScheme("derivedemo")
+		DerivedController.default.setScheme("derivedemo")
 		
 		return true
 	}
@@ -48,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	*/
 	func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
 		// Must handle this here
-		return DerivedController.getInstance().handleOpenUrl(url, sourceApplication: sourceApplication);
+		return DerivedController.default.handleOpenUrl(url, sourceApplication: sourceApplication);
 	}
 	
 }
